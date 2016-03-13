@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css" id="css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <title>Web Shell</title>
+  </head>
+  <body>
+    <h1>Web shell</h1>
+    <div id="shellContainer">
+      <p id="shell">
+
+      </p>
+    </div>
+    <div id="enter_command">
+      <input id="box"></input>
+      <button id="button">Enter</button>
+    </div>
+    <script>
+    $("#button").click(function() {
+      var comm = $("#box").val();
+      $("#box").val(null);
+      command(comm);
+    });
+    $("#box").on("keypress", function(event) {
+      if (event.which === 13) {
+        var comm = $("#box").val();
+        $("#box").val(null);
+        command(comm);
+      }
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+#enter_command {
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+}
+
+#box {
+  width: 90%;
+  height: 100%;
+}
+
+#button {
+  width: 8%;
+}
+
+.user {
+  color: red;
+}
+
+a {
+  color: white;
+}
