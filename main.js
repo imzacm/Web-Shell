@@ -60,10 +60,15 @@ function info() {
   $("#shell").append('<b class="user">&nbsp &nbsp &nbsp &nbsp</b> ' + 'Website | <a href="http://zacmcchesney.com" target="_blank">zacmcchesney.com<a>' + "<br>");
 }
 
+function runjs(js) {
+  window[js[1]](js[2]);
+}
+
 function commList() {
   var commands = ["help"];
   commands.push("echo");
   commands.push("info");
+  commands.push("runjs");
   return commands;
 }
 
@@ -72,5 +77,6 @@ function help() {
   helpArray.push("help | displays a list of commands with descriptions");
   helpArray.push('echo "echo text" | outputs the "echo text"');
   helpArray.push("info | displays information about the shell");
+  helpArray.push('runjs "js command" "js args" | runs a javascript function');
   writeToShell(helpArray);
 }
